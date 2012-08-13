@@ -92,7 +92,7 @@ For that end, you need to create a custom UserDetailsService according to [Custo
 Last pieces are DI definition for 'recaptchaService' in UserDetailsService and
 a customized GSP page with captcha (auth.gsp)
 
-    $ vi resource.groovy
+    $ vi grails-app/conf/spring/resources.groovy
     // Place your Spring DSL code here
     beans = {
         userDetailsService(com.testapp.CaptchaUserDetailsService) {
@@ -100,7 +100,7 @@ a customized GSP page with captcha (auth.gsp)
         }
     }
 
-    $ vi auth.gsp
+    $ vi grails-app/views/login/auth.gsp
     ...
         <p>
             <recaptcha:ifEnabled>
